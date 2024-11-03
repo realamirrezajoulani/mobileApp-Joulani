@@ -18,7 +18,7 @@ void main() {
     
     arryNewData.add({
       'score': score.ceil(),
-      'status': score >= 10 ? 'pass' : 'faild',
+      'status': score > 9 ? 'pass' : 'faild',
     });
   });
 
