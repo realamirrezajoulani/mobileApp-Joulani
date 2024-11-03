@@ -14,9 +14,11 @@ void main() {
   List<Map<String, dynamic>> arryNewData = [];
 
   data.forEach((stu) {
+    double score = (stu['score'] is int) ? (stu['score'] as int).toDouble() : (stu['score'] as double);
+    
     arryNewData.add({
-      'score': (stu['score'] as double).ceil(),
-      'status': stu['score'] >= 10 ? 'pass' : 'faild',
+      'score': score.ceil(),
+      'status': score >= 10 ? 'pass' : 'faild',
     });
   });
 
