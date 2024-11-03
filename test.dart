@@ -16,12 +16,8 @@ void main() {
   data.forEach((stu) {
     arryNewData.add({
       'score': (stu['score'] as double).ceil(),
-      'status': stu['score'] > 9 ? 'pass' : 'faild',
+      'status': stu['score'] >= 10 ? 'pass' : 'faild',
     });
-
-    // Uncomment the following lines for the second approach
-    // double scoreTest = stu['score'] % 1 > 0.5 ? (stu['score'] + 1).floorToDouble() : stu['score'].floorToDouble();
-    // arryNewData.add({'score': scoreTest, 'status': stu['score'] >= 10 ? 'pass' : 'faild'});
   });
 
   print(arryNewData);
